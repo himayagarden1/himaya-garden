@@ -10,18 +10,19 @@ import EventCalendar from '../components/EventCalendar.astro';
         flex-direction: column;
     }
 
-    .home-flow > .home-hero { order: 1; }
-    .home-flow > .home-utility { order: 2; } 
+    .home-flow > .home-hero         { order: 1; }
+    .home-flow > .home-utility      { order: 2; }
     .home-flow > .home-social-proof { order: 3; }
-    .home-flow > .home-ways { order: 4; }
-    .home-flow > .home-high-tea { order: 5; }
-    .home-flow > .home-garden { order: 6; }
-    .home-flow > .home-food { order: 7; }
-    .home-flow > .home-calendar { order: 8; }
-    .home-flow > .home-included { order: 9; }
-    .home-flow > .home-founder { order: 10; }
-    .home-flow > .home-reviews { order: 11; }
-    .home-flow > .home-cta { order: 12; }
+    .home-flow > .home-ways         { order: 4; }
+    .home-flow > .home-high-tea     { order: 5; }
+    .home-flow > .home-garden       { order: 6; }
+    .home-flow > .home-video        { order: 7; }
+    .home-flow > .home-food         { order: 8; }
+    .home-flow > .home-calendar     { order: 9; }
+    .home-flow > .home-included     { order: 10; }
+    .home-flow > .home-founder      { order: 11; }
+    .home-flow > .home-reviews      { order: 12; }
+    .home-flow > .home-cta          { order: 13; }
 
     h1 {
         font-family: 'Inter', sans-serif, serif !important;
@@ -67,7 +68,6 @@ import EventCalendar from '../components/EventCalendar.astro';
                     </p>
                 </div>
             </div>
-
             <div class="relative z-[3] text-center text-white max-w-4xl mx-auto px-6 md:px-12 lg:px-20 xl:px-32 w-full">
                 <div class="hero-buttons" data-slide="0">
                     <div class="fade-in delay-4 flex flex-wrap gap-4 justify-center">
@@ -97,6 +97,25 @@ import EventCalendar from '../components/EventCalendar.astro';
             <div class="absolute bottom-10 left-1/2 z-[3] -translate-x-1/2 animate-bounce-slow">
                 <div class="w-px h-12 bg-white/40"></div>
             </div>
+        </section>
+        <!-- =========================================================
+             VIDEO HIGHLIGHT REEL
+        ========================================================== -->
+        <section class="home-video relative isolate overflow-hidden bg-charcoal">
+
+            <video
+                class="h-full w-full object-cover aspect-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="/media/img/AG1_4.jpg"
+            >
+                <source src="/media/videos/7be962ce53c449029231c0c026123bf8.HD-720p-4.5Mbps-74244527.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+
         </section>
         <section class="home-utility bg-sage py-8 md:py-10">
             <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 xl:px-32 text-center">
