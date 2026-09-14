@@ -332,6 +332,92 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
         </section>
 
+        <!-- =========================================================
+             Mini GALLERY
+        ========================================================== -->
+        <section class="bg-warm-white pb-24 pt-4 md:pb-32 lg:pb-36">
+
+            <div
+                class="mx-auto max-w-7xl px-6
+                       md:px-12 lg:px-20 xl:px-32"
+            >
+
+                <div
+                    class="grid gap-5
+                           lg:grid-cols-[1.15fr_1fr_1fr]"
+                >
+
+                    <!-- Tall image -->
+                    <figure
+                        class="fade-in group relative overflow-hidden
+                               rounded-sm shadow-lg lg:row-span-1"
+                    >
+                        <img
+                            src="/media/img/event-high-tea.jpg"
+                            alt="A wedding celebration in the Himaya Garden"
+                            class="h-72 w-full object-cover
+                                   transition-transform duration-700
+                                   group-hover:scale-[1.04]
+                                   sm:h-96 lg:h-[26rem]"
+                            loading="lazy"
+                        />
+
+                        <div
+                            class="absolute inset-0
+                                   bg-gradient-to-t
+                                   from-charcoal/25 to-transparent"
+                        ></div>
+                    </figure>
+
+
+                    <!-- Shorter image -->
+                    <figure
+                        class="fade-in delay-1 group relative overflow-hidden
+                               rounded-sm shadow-lg"
+                    >
+                        <img
+                            src="/media/img/collage-3.jpg"
+                            alt="The ceremony lawn at Himaya Garden"
+                            class="h-72 w-full object-cover
+                                   transition-transform duration-700
+                                   group-hover:scale-[1.04]
+                                   sm:h-96 lg:h-[26rem]"
+                            loading="lazy"
+                        />
+
+                        <div
+                            class="absolute inset-0
+                                   bg-gradient-to-t
+                                   from-charcoal/25 to-transparent"
+                        ></div>
+                    </figure>
+
+
+                    <!-- Shorter image -->
+                    <figure
+                        class="fade-in delay-2 group relative overflow-hidden
+                               rounded-sm shadow-lg"
+                    >
+                        <img
+                            src="/media/img/high-tea-2.jpg"
+                            alt="Guests at a Himaya Garden celebration"
+                            class="h-72 w-full object-cover
+                                   transition-transform duration-700
+                                   group-hover:scale-[1.04]
+                                   sm:h-96 lg:h-[26rem]"
+                            loading="lazy"
+                        />
+
+                        <div
+                            class="absolute inset-0
+                                   bg-gradient-to-t
+                                   from-charcoal/25 to-transparent"
+                        ></div>
+                    </figure>
+
+                </div>
+            </div>
+        </section>
 
         <!-- =========================================================
              THE AFTERNOON / TIMELINE
@@ -688,15 +774,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 
         <!-- =========================================================
-             WHAT'S INCLUDED
+            WHAT'S INCLUDED
         ========================================================== -->
         <section id="included" class="bg-cream py-24 md:py-32 lg:py-36">
 
             <div
                 class="mx-auto max-w-7xl px-6
-                       md:px-12 lg:px-20 xl:px-32"
+                    md:px-12 lg:px-20 xl:px-32"
             >
 
+                <!-- Section Intro -->
                 <div class="mx-auto max-w-3xl text-center">
 
                     <p class="section-label fade-in">
@@ -705,9 +792,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
                     <h2
                         class="fade-in delay-1 mt-4
-                               font-serif text-4xl font-light
-                               leading-tight text-charcoal
-                               md:text-5xl lg:text-6xl"
+                            font-serif text-4xl font-light
+                            leading-tight text-charcoal
+                            md:text-5xl lg:text-6xl"
                     >
                         You're not renting a room.
                         <span class="block italic text-charcoal/80">
@@ -717,7 +804,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
                     <p
                         class="fade-in delay-2 mx-auto mt-6 max-w-2xl
-                               text-lg leading-relaxed text-stone"
+                            text-lg leading-relaxed text-stone"
                     >
                         Here's everything that's done for you — and what you'd
                         pay to source each piece separately in Tucson.
@@ -726,275 +813,382 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 </div>
 
 
-                <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                <!-- Main Content -->
+                <div
+                    class="mt-16 grid items-start gap-12
+                        lg:grid-cols-2 lg:gap-16 xl:gap-24"
+                >
 
-                    <div
-                        class="fade-in group rounded-sm
-                               border border-sage/20
-                               bg-warm-white p-7
-                               transition-all duration-300
-                               hover:-translate-y-1 hover:shadow-lg hover:border-sage/40"
-                    >
+                    <!-- =====================================================
+                        LEFT: ITEMIZED LIST
+                    ====================================================== -->
+                    <div class="fade-in">
+
                         <div
-                            class="mb-5 flex h-11 w-11 items-center
-                                   justify-center rounded-full
-                                   bg-sage/15 text-xl
-                                   transition-transform duration-300
-                                   group-hover:scale-110"
+                            class="border-y border-charcoal/20
+                                py-3"
                         >
-                            🏛️
+                            <div class="flex items-center justify-between">
+                                <p
+                                    class="text-xs font-semibold uppercase
+                                        tracking-[0.2em] text-sage"
+                                >
+                                    What's included
+                                </p>
+
+                                <p
+                                    class="text-xs font-semibold uppercase
+                                        tracking-[0.2em] text-sage"
+                                >
+                                    Value
+                                </p>
+                            </div>
                         </div>
 
-                        <p class="text-xs uppercase tracking-[0.2em] text-sage font-semibold">
-                            01 · Your private Tea House
-                        </p>
 
-                        <h3 class="mt-2 font-serif text-2xl text-charcoal">
-                            Styled to your theme
-                        </h3>
+                        <!-- Item 01 -->
+                        <div
+                            class="border-b border-charcoal/10
+                                py-5"
+                        >
+                            <div class="flex items-start justify-between gap-6">
 
-                        <p class="mt-3 leading-relaxed text-stone">
-                            Three hours of access, styled to your theme.
-                        </p>
+                                <div class="flex gap-4">
 
-                        <p class="mt-3 text-sm text-gold font-semibold">
-                            $850 value
-                        </p>
+                                    <span
+                                        class="pt-1 text-xs font-semibold
+                                            tracking-[0.15em] text-sage"
+                                    >
+                                        01
+                                    </span>
+
+                                    <div>
+                                        <p class="font-serif text-xl text-charcoal">
+                                            Your private Tea House
+                                        </p>
+
+                                        <p class="mt-1 text-sm leading-relaxed text-stone">
+                                            Styled to your theme · Three hours of access
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <p
+                                    class="shrink-0 text-sm font-semibold
+                                        text-gold"
+                                >
+                                    $850
+                                </p>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Item 02 -->
+                        <div
+                            class="border-b border-charcoal/10
+                                py-5"
+                        >
+                            <div class="flex items-start justify-between gap-6">
+
+                                <div class="flex gap-4">
+
+                                    <span
+                                        class="pt-1 text-xs font-semibold
+                                            tracking-[0.15em] text-sage"
+                                    >
+                                        02
+                                    </span>
+
+                                    <div>
+                                        <p class="font-serif text-xl text-charcoal">
+                                            Tables, chairs & ivory linens
+                                        </p>
+
+                                        <p class="mt-1 text-sm leading-relaxed text-stone">
+                                            Set and ready before you arrive
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <p
+                                    class="shrink-0 text-sm font-semibold
+                                        text-gold"
+                                >
+                                    $300
+                                </p>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Item 03 -->
+                        <div
+                            class="border-b border-charcoal/10
+                                py-5"
+                        >
+                            <div class="flex items-start justify-between gap-6">
+
+                                <div class="flex gap-4">
+
+                                    <span
+                                        class="pt-1 text-xs font-semibold
+                                            tracking-[0.15em] text-sage"
+                                    >
+                                        03
+                                    </span>
+
+                                    <div>
+                                        <p class="font-serif text-xl text-charcoal">
+                                            Curated tablescape
+                                        </p>
+
+                                        <p class="mt-1 text-sm leading-relaxed text-stone">
+                                            Centerpieces, fine tableware & glassware
+                                            in your color palette
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <p
+                                    class="shrink-0 text-sm font-semibold
+                                        text-gold"
+                                >
+                                    $275
+                                </p>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Item 04 -->
+                        <div
+                            class="border-b border-charcoal/10
+                                py-5"
+                        >
+                            <div class="flex items-start justify-between gap-6">
+
+                                <div class="flex gap-4">
+
+                                    <span
+                                        class="pt-1 text-xs font-semibold
+                                            tracking-[0.15em] text-sage"
+                                    >
+                                        04
+                                    </span>
+
+                                    <div>
+                                        <p class="font-serif text-xl text-charcoal">
+                                            The Dragonfly High Tea spread
+                                        </p>
+
+                                        <p class="mt-1 text-sm leading-relaxed text-stone">
+                                            Filipino-inspired savories, sweets,
+                                            signature Tea Cakes & full Maya Tea service
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <p
+                                    class="shrink-0 text-sm font-semibold
+                                        text-gold"
+                                >
+                                    $1,100
+                                </p>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Item 05 -->
+                        <div
+                            class="border-b border-charcoal/10
+                                py-5"
+                        >
+                            <div class="flex items-start justify-between gap-6">
+
+                                <div class="flex gap-4">
+
+                                    <span
+                                        class="pt-1 text-xs font-semibold
+                                            tracking-[0.15em] text-sage"
+                                    >
+                                        05
+                                    </span>
+
+                                    <div>
+                                        <p class="font-serif text-xl text-charcoal">
+                                            Full table & tea service staff
+                                        </p>
+
+                                        <p class="mt-1 text-sm leading-relaxed text-stone">
+                                            Poured, cleared, and cared for all afternoon
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <p
+                                    class="shrink-0 text-sm font-semibold
+                                        text-gold"
+                                >
+                                    $375
+                                </p>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Item 06 -->
+                        <div
+                            class="border-b border-charcoal/10
+                                py-5"
+                        >
+                            <div class="flex items-start justify-between gap-6">
+
+                                <div class="flex gap-4">
+
+                                    <span
+                                        class="pt-1 text-xs font-semibold
+                                            tracking-[0.15em] text-sage"
+                                    >
+                                        06
+                                    </span>
+
+                                    <div>
+                                        <p class="font-serif text-xl text-charcoal">
+                                            Your dedicated onsite Tea Host
+                                        </p>
+
+                                        <p class="mt-1 text-sm leading-relaxed text-stone">
+                                            Day-of coordinator who runs the timeline
+                                            so you don't have to
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <p
+                                    class="shrink-0 text-sm font-semibold
+                                        text-gold"
+                                >
+                                    $400
+                                </p>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Item 07 -->
+                        <div
+                            class="border-b border-charcoal/10
+                                py-5"
+                        >
+                            <div class="flex items-start justify-between gap-6">
+
+                                <div class="flex gap-4">
+
+                                    <span
+                                        class="pt-1 text-xs font-semibold
+                                            tracking-[0.15em] text-sage"
+                                    >
+                                        07
+                                    </span>
+
+                                    <div>
+                                        <p class="font-serif text-xl text-charcoal">
+                                            Sound, parking & restrooms
+                                        </p>
+
+                                        <p class="mt-1 text-sm leading-relaxed text-stone">
+                                            Complete setup and teardown handled
+                                            by our team
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <p
+                                    class="shrink-0 text-sm font-semibold
+                                        text-gold"
+                                >
+                                    $200
+                                </p>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Total -->
+                        <div class="mt-6 flex items-end justify-between">
+
+                            <div>
+                                <p
+                                    class="text-xs font-semibold uppercase
+                                        tracking-[0.2em] text-sage"
+                                >
+                                    Core experience value
+                                </p>
+
+                                <p class="mt-2 text-sm text-stone">
+                                    Everything above, handled for you.
+                                </p>
+                            </div>
+
+                            <p
+                                class="font-serif text-4xl
+                                    text-charcoal md:text-5xl"
+                            >
+                                $3,500
+                            </p>
+
+                        </div>
+
                     </div>
 
 
+                    <!-- =====================================================
+                        RIGHT: IMAGE GALLERY
+                    ====================================================== -->
                     <div
-                        class="fade-in delay-1 group rounded-sm
-                               border border-sage/20
-                               bg-warm-white p-7
-                               transition-all duration-300
-                               hover:-translate-y-1 hover:shadow-lg hover:border-sage/40"
+                        class="fade-in delay-2 grid gap-5"
                     >
+
+                        <!-- Image 1 -->
                         <div
-                            class="mb-5 flex h-11 w-11 items-center
-                                   justify-center rounded-full
-                                   bg-sage/15 text-xl
-                                   transition-transform duration-300
-                                   group-hover:scale-110"
+                            class="group relative overflow-hidden
+                                bg-stone/10"
                         >
-                            🪑
+                            <img
+                                src="/media/img/hospitality-table.jpg"
+                                alt="Dragonfly Tea House tablescape"
+                                class="aspect-[4/3] w-full
+                                    object-cover
+                                    transition-transform duration-700
+                                    group-hover:scale-105"
+                            >
                         </div>
 
-                        <p class="text-xs uppercase tracking-[0.2em] text-sage font-semibold">
-                            02 · Tables, chairs & ivory linens
-                        </p>
 
-                        <h3 class="mt-2 font-serif text-2xl text-charcoal">
-                            Set and ready before you arrive
-                        </h3>
-
-                        <p class="mt-3 leading-relaxed text-stone">
-                            Tables, chairs, and ivory linens set and ready
-                            before you arrive.
-                        </p>
-
-                        <p class="mt-3 text-sm text-gold font-semibold">
-                            $300 value
-                        </p>
-                    </div>
-
-
-                    <div
-                        class="fade-in delay-2 group rounded-sm
-                               border border-sage/20
-                               bg-warm-white p-7
-                               transition-all duration-300
-                               hover:-translate-y-1 hover:shadow-lg hover:border-sage/40"
-                    >
+                        <!-- Image 2 -->
                         <div
-                            class="mb-5 flex h-11 w-11 items-center
-                                   justify-center rounded-full
-                                   bg-sage/15 text-xl
-                                   transition-transform duration-300
-                                   group-hover:scale-110"
+                            class="group relative overflow-hidden
+                                bg-stone/10"
                         >
-                            🍽️
+                            <img
+                                src="/media/img/collage-3.jpg"
+                                alt="Dragonfly Tea House afternoon tea"
+                                class="aspect-[4/3] w-full
+                                    object-cover
+                                    transition-transform duration-700
+                                    group-hover:scale-105"
+                            >
                         </div>
 
-                        <p class="text-xs uppercase tracking-[0.2em] text-sage font-semibold">
-                            03 · Curated tablescape
-                        </p>
-
-                        <h3 class="mt-2 font-serif text-2xl text-charcoal">
-                            Centerpieces, fine tableware
-                        </h3>
-
-                        <p class="mt-3 leading-relaxed text-stone">
-                            Centerpieces, fine tableware, and glassware in
-                            your color palette.
-                        </p>
-
-                        <p class="mt-3 text-sm text-gold font-semibold">
-                            $275 value
-                        </p>
-                    </div>
-
-
-                    <div
-                        class="fade-in delay-3 group rounded-sm
-                               border border-sage/20
-                               bg-warm-white p-7
-                               transition-all duration-300
-                               hover:-translate-y-1 hover:shadow-lg hover:border-sage/40"
-                    >
-                        <div
-                            class="mb-5 flex h-11 w-11 items-center
-                                   justify-center rounded-full
-                                   bg-sage/15 text-xl
-                                   transition-transform duration-300
-                                   group-hover:scale-110"
-                        >
-                            🍰
-                        </div>
-
-                        <p class="text-xs uppercase tracking-[0.2em] text-sage font-semibold">
-                            04 · The Dragonfly High Tea spread
-                        </p>
-
-                        <h3 class="mt-2 font-serif text-2xl text-charcoal">
-                            Filipino-inspired savories & sweets
-                        </h3>
-
-                        <p class="mt-3 leading-relaxed text-stone">
-                            Filipino-inspired savories, sweets, signature Tea
-                            Cakes, with full Maya Tea service.
-                        </p>
-
-                        <p class="mt-3 text-sm text-gold font-semibold">
-                            $1,100 value
-                        </p>
-                    </div>
-
-
-                    <div
-                        class="fade-in delay-1 group rounded-sm
-                               border border-sage/20
-                               bg-warm-white p-7
-                               transition-all duration-300
-                               hover:-translate-y-1 hover:shadow-lg hover:border-sage/40"
-                    >
-                        <div
-                            class="mb-5 flex h-11 w-11 items-center
-                                   justify-center rounded-full
-                                   bg-sage/15 text-xl
-                                   transition-transform duration-300
-                                   group-hover:scale-110"
-                        >
-                            🫖
-                        </div>
-
-                        <p class="text-xs uppercase tracking-[0.2em] text-sage font-semibold">
-                            05 · Full table & tea service staff
-                        </p>
-
-                        <h3 class="mt-2 font-serif text-2xl text-charcoal">
-                            Poured, cleared, cared for
-                        </h3>
-
-                        <p class="mt-3 leading-relaxed text-stone">
-                            Poured, cleared, and cared for all afternoon.
-                        </p>
-
-                        <p class="mt-3 text-sm text-gold font-semibold">
-                            $375 value
-                        </p>
-                    </div>
-
-
-                    <div
-                        class="fade-in delay-2 group rounded-sm
-                               border border-sage/20
-                               bg-warm-white p-7
-                               transition-all duration-300
-                               hover:-translate-y-1 hover:shadow-lg hover:border-sage/40"
-                    >
-                        <div
-                            class="mb-5 flex h-11 w-11 items-center
-                                   justify-center rounded-full
-                                   bg-sage/15 text-xl
-                                   transition-transform duration-300
-                                   group-hover:scale-110"
-                        >
-                            🌿
-                        </div>
-
-                        <p class="text-xs uppercase tracking-[0.2em] text-sage font-semibold">
-                            06 · Your dedicated onsite Tea Host
-                        </p>
-
-                        <h3 class="mt-2 font-serif text-2xl text-charcoal">
-                            Day-of coordinator
-                        </h3>
-
-                        <p class="mt-3 leading-relaxed text-stone">
-                            Day-of coordinator who runs the timeline so you
-                            don't have to.
-                        </p>
-
-                        <p class="mt-3 text-sm text-gold font-semibold">
-                            $400 value
-                        </p>
-                    </div>
-
-
-                    <div
-                        class="fade-in delay-3 group rounded-sm
-                               border border-sage/20
-                               bg-warm-white p-7
-                               transition-all duration-300
-                               hover:-translate-y-1 hover:shadow-lg hover:border-sage/40"
-                    >
-                        <div
-                            class="mb-5 flex h-11 w-11 items-center
-                                   justify-center rounded-full
-                                   bg-sage/15 text-xl
-                                   transition-transform duration-300
-                                   group-hover:scale-110"
-                        >
-                            🧹
-                        </div>
-
-                        <p class="text-xs uppercase tracking-[0.2em] text-sage font-semibold">
-                            07 · Sound, parking & restrooms
-                        </p>
-
-                        <h3 class="mt-2 font-serif text-2xl text-charcoal">
-                            Plus complete setup and teardown
-                        </h3>
-
-                        <p class="mt-3 leading-relaxed text-stone">
-                            Complete setup and teardown handled by our team.
-                        </p>
-
-                        <p class="mt-3 text-sm text-gold font-semibold">
-                            $200 value
-                        </p>
-                    </div>
-
-
-                    <div
-                        class="fade-in delay-4 group rounded-sm
-                               border-2 border-sage
-                               bg-warm-white p-7
-                               transition-all duration-300
-                               hover:-translate-y-1 hover:shadow-lg"
-                    >
-                        <p class="text-xs uppercase tracking-[0.2em] text-sage font-semibold">
-                            Core experience value
-                        </p>
-
-                        <h3 class="mt-3 font-serif text-4xl text-charcoal">
-                            $3,500
-                        </h3>
-
-                        <p class="mt-3 leading-relaxed text-stone">
-                            Plus four bonuses most venues would never include.
-                        </p>
                     </div>
 
                 </div>
